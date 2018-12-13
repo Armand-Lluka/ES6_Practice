@@ -86,3 +86,11 @@
     //                // This is because functions are just values, they live on their own. When we called obiwan.speak we are just calling the talk() function, and since 'This' in the context of 
     //                // being called in the anakin object, it will use the 'this.sound' found in it's local context
     
+// Some Rules 
+    
+    // 1.) Is the function called with new (new binding)? If so, this is the newly constructed object.
+    // 2.) Is the function called with call or apply (explicit binding), even hidden inside a bind hard binding? If so, this is the explicitly specified object.
+    // 3.) Is the function called with a context (implicit binding), otherwise known as an owning or containing object? If so, this is that context object.
+    // 4.) Otherwise, default the this (default binding). If in strict mode, pick undefined, otherwise pick the global object. 
+    
+    //    https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes﻿
