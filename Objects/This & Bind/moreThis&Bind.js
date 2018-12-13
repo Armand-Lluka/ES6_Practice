@@ -4,10 +4,10 @@
 
 // Example 1
 
-    // function talk(sound){
-    //     console.log(sound)
-    // }
-    // talk('nooooo') // Should see 'noooo' in the console
+    function talk(sound){
+        console.log(sound)
+    }
+    talk('nooooo') // Should see 'noooo' in the console
 
 // Example 1.1
 
@@ -68,21 +68,21 @@
 
 // Example 1.6 
 
-    function talk() {
-        console.log(this.sound)
-    }
+    // function talk() {
+    //     console.log(this.sound)
+    // }
 
-    let obiwan = {
-        speak: talk, 
-        sound: "I have the highground anakin, it's over!"
-    } 
+    // let obiwan = {
+    //     speak: talk, 
+    //     sound: "I have the highground anakin, it's over!"
+    // } 
 
-    let anakin = {
-        speak: obiwan.speak,   // What do you think this will return? 
-        sound: 'You underestimate me'
-    } 
+    // let anakin = {
+    //     speak: obiwan.speak,   // What do you think this will return? 
+    //     sound: 'You underestimate me'
+    // } 
 
-    anakin.speak() //'You underestimate me'  
-                   // This is because functions are just values, they live on their own. When we called obiwan.speak we are just calling the talk() function, and since 'This' in the context of 
-                   // being called in the anakin object, it will use the 'this.sound' found in it's local context
+    // anakin.speak() //'You underestimate me'  
+    //                // This is because functions are just values, they live on their own. When we called obiwan.speak we are just calling the talk() function, and since 'This' in the context of 
+    //                // being called in the anakin object, it will use the 'this.sound' found in it's local context
     
